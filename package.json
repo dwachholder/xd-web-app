@@ -5,7 +5,14 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "docker:build": "docker build -t dwachholder/xd-web-app .",
+    "docker:run": "docker run -p 3000:3000 dwachholder/xd-web-app",
+    "docker:push": "docker push dwachholder/xd-web-app",
+    "docker:build-push": "docker build -t dwachholder/xd-web-app . && docker push dwachholder/xd-web-app",
+    "docker:compose:up": "docker-compose up -d",
+    "docker:compose:down": "docker-compose down",
+    "docker:compose:build": "docker-compose up --build -d"
   },
   "dependencies": {
     "react": "19.1.0",
